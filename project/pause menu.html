@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="pause menu.css">
+<script src="pause menu.js"></script>
+</head>
+<body>
+ <!-- tic tac toe play area table-->
+ <div id="chooseXOrO">
+  <h1>Choose Symbol</h1>
+  <button class="symbolSelectButton" type="button" onclick="disappear()">X</button>
+  <button class="symbolSelectButton" type="button" onclick="disappear()">O</button>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Pause</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <p>Pause</p>
+    <a href="projectskeleton.html"><button onclick="myButton2()">Back to menu</button></a>
+    <button onclick="myButton()">Restart</button>
+  </div>
+
+</div>
+<table style="margin-left: auto;margin-right: auto;">
+  <tr>
+    <td id="square0" onmouseover="mouseOverSquare(0)" onmouseout="mouseOffSquare(0)"><button class="button" id="button0" type="button" onclick="clickedOnSquare(0)"></button></td>
+    <td id="square1" onmouseover="mouseOverSquare(1)" onmouseout="mouseOffSquare(1)"><button class="button" id="button1" type="button" onclick="clickedOnSquare(1)"></button></td>
+    <td id="square2" onmouseover="mouseOverSquare(2)" onmouseout="mouseOffSquare(2)"><button class="button" id="button2" type="button" onclick="clickedOnSquare(2)"></button></td>
+  </tr>
+  <tr>
+    <td id="square3" onmouseover="mouseOverSquare(3)" onmouseout="mouseOffSquare(3)"><button class="button" id="button3" type="button" onclick="clickedOnSquare(3)"></button></td>
+    <td id="square4" onmouseover="mouseOverSquare(4)" onmouseout="mouseOffSquare(4)"><button class="button" id="button4" type="button" onclick="clickedOnSquare(4)"></button></td>
+    <td id="square5" onmouseover="mouseOverSquare(5)" onmouseout="mouseOffSquare(5)"><button class="button" id="button5" type="button" onclick="clickedOnSquare(5)"></button></td>
+  </tr>
+  <tr>
+    <td id="square6" onmouseover="mouseOverSquare(6)" onmouseout="mouseOffSquare(6)"><button class="button" id="button6" type="button" onclick="clickedOnSquare(6)"></button></td>
+    <td id="square7" onmouseover="mouseOverSquare(7)" onmouseout="mouseOffSquare(7)"><button class="button" id="button7" type="button" onclick="clickedOnSquare(7)"></button></td>
+    <td id="square8" onmouseover="mouseOverSquare(8)" onmouseout="mouseOffSquare(8)"><button class="button" id="button8" type="button" onclick="clickedOnSquare(8)"></button></td>
+  </tr>
+</table>
+<script> 
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function myButton(){
+  location.reload();
+}
+</script>
+</body>
+</html>
